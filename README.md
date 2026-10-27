@@ -37,7 +37,6 @@ The first release should include:
 After the core model is validated, an **SF life** expansion could add traits available on the same Census records:
 
 - works in a technology industry or computer/mathematical occupation;
-- works from home, takes transit, bikes, walks, or drives to work;
 - educational attainment and field of degree;
 - recently moved to San Francisco or has lived in the same home for a longer period;
 - lives alone, with roommates, with a partner, or in another household arrangement;
@@ -78,6 +77,18 @@ See [docs/DATA_AND_MODEL_PLAN.md](docs/DATA_AND_MODEL_PLAN.md) for the statistic
 - A small pre-aggregated dataset or privacy-safe weighted synthetic sample shipped to the browser
 - SVG-based counter and funnel graphics
 - Static deployment on Vercel for the MVP; no backend or personal-data collection required
+
+## First prototype
+
+The first working version intentionally includes only five compact filters: age, personal income, related children in the household, current marital status, and a documented tech-work definition. It uses a privacy-safe aggregate cube generated from weighted 2024 ACS PUMS records and calculates ACS replicate-weight uncertainty in the browser.
+
+```bash
+npm install
+npm run data:build -- /path/to/psam_p06.csv /path/to/psam_h06.csv
+npm run dev
+```
+
+The raw California PUMS files are not committed. Download the 2024 1-year person and housing CSV files from the Census Bureau, then run the reproducible build script above.
 
 ## Delivery phases
 

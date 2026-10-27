@@ -1,0 +1,201 @@
+:root {
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #24201e;
+  background: #f7f2eb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+button, select { font: inherit; }
+
+button, select, a { -webkit-tap-highlight-color: transparent; }
+
+main {
+  width: min(100% - 32px, 620px);
+  margin: 0 auto;
+  padding: 52px 0 36px;
+}
+
+.intro { text-align: center; }
+
+.eyebrow,
+.estimate-label,
+.card-topline {
+  margin: 0;
+  color: #655e59;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+
+h1 {
+  margin: 10px auto 12px;
+  max-width: 540px;
+  font-size: clamp(2.3rem, 8vw, 4.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.intro > p:last-child {
+  max-width: 460px;
+  margin: 0 auto;
+  color: #655e59;
+  line-height: 1.5;
+}
+
+.estimate { margin: 38px 0 30px; text-align: center; }
+
+.estimate-value {
+  margin: 5px 0 0;
+  font-size: clamp(2rem, 7vw, 3.3rem);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+}
+
+.estimate-context, .range { margin: 4px 0 0; color: #655e59; font-size: 0.9rem; }
+
+.meter {
+  height: 6px;
+  margin: 16px auto 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2dbd3;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #d84f4a;
+  transition: width 280ms ease;
+}
+
+.card-stack { position: relative; margin-top: 18px; }
+
+.card-shadow {
+  position: absolute;
+  inset: 8px 12px -8px;
+  border-radius: 26px;
+  background: #ded3c7;
+  transform: rotate(1.2deg);
+}
+
+.preference-card {
+  position: relative;
+  min-height: 390px;
+  padding: 26px;
+  border: 1px solid #e2d9d0;
+  border-radius: 24px;
+  background: #fffdf9;
+  box-shadow: 0 18px 50px rgb(62 43 30 / 8%);
+}
+
+.card-topline { display: flex; justify-content: space-between; gap: 16px; }
+
+.question { padding: 40px 0 24px; }
+
+h2 { margin: 0; font-size: clamp(1.8rem, 6vw, 2.55rem); line-height: 1.08; letter-spacing: -0.025em; }
+
+.helper { margin: 10px 0 0; color: #716963; line-height: 1.45; }
+
+.choices { display: grid; gap: 10px; margin-top: 28px; }
+
+.choice {
+  min-height: 50px;
+  padding: 12px 16px;
+  border: 1px solid #d9d0c8;
+  border-radius: 13px;
+  color: #2b2725;
+  background: transparent;
+  text-align: left;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.choice:hover { border-color: #9f9389; }
+
+.choice[data-selected="true"] {
+  border-color: #2b2725;
+  background: #2b2725;
+  color: #fffdf9;
+}
+
+.age-fields {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 14px;
+  margin-top: 42px;
+}
+
+.age-fields label { color: #655e59; font-size: 0.85rem; }
+
+.age-fields > span { padding-bottom: 14px; color: #91867e; }
+
+select {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 7px;
+  padding: 0 14px;
+  border: 1px solid #d9d0c8;
+  border-radius: 13px;
+  color: #24201e;
+  background: #fffdf9;
+}
+
+.navigation, .summary-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.back, .next {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.back { border: 0; color: #655e59; background: transparent; }
+.back:disabled { opacity: 0.35; }
+.next { border: 1px solid #d84f4a; color: #fff; background: #d84f4a; }
+
+.summary h2 { margin-top: 38px; }
+
+.summary ul { margin: 28px 0; padding: 0; list-style: none; }
+
+.summary li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee6de;
+}
+
+.summary li span { color: #716963; }
+.summary li strong { text-align: right; }
+
+footer { padding: 34px 8px 0; color: #716963; font-size: 0.78rem; line-height: 1.5; text-align: center; }
+footer p { margin: 0 auto 8px; }
+footer a { color: inherit; text-underline-offset: 3px; }
+
+button:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid rgb(216 79 74 / 30%); outline-offset: 3px; }
+
+@media (max-width: 480px) {
+  main { width: min(100% - 22px, 620px); padding-top: 30px; }
+  .estimate { margin: 28px 0 22px; }
+  .preference-card { min-height: 410px; padding: 22px; }
+  .question { padding-top: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}

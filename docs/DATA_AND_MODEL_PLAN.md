@@ -11,7 +11,6 @@ The model estimates demographic matches among residents. It does not estimate ac
 ACS PUMS supports several traits that feel specific to life in San Francisco and can remain jointly modeled with age, income, and household characteristics:
 
 - occupation and industry, including separately defined technology-industry and technology-occupation measures;
-- work from home and commute mode;
 - educational attainment and field of degree;
 - mobility and when the person moved into their current home;
 - household composition and housing tenure;
