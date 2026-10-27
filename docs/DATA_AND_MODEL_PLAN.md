@@ -2,9 +2,25 @@
 
 ## 1. Define the population
 
-The default denominator is all San Francisco residents age 18 and older. The interface may offer a user-selected age range, but it should not silently restrict the base population to assumed “dating ages.”
+The default denominator is all San Francisco residents age 21 and older. The interface may offer a user-selected age range. Age 21 is a product choice for a post-college-and-beyond audience, not evidence that younger adults are inactive in dating.
 
 The model estimates demographic matches among residents. It does not estimate active dating-app users or people willing to date the user.
+
+## 1a. Add SF-specific traits in a second release
+
+ACS PUMS supports several traits that feel specific to life in San Francisco and can remain jointly modeled with age, income, and household characteristics:
+
+- occupation and industry, including separately defined technology-industry and technology-occupation measures;
+- work from home and commute mode;
+- educational attainment and field of degree;
+- mobility and when the person moved into their current home;
+- household composition and housing tenure;
+- place of birth, citizenship, and year of entry; and
+- language spoken at home.
+
+Publish the precise code list behind any friendly label. In particular, never use a single unexplained “works in tech” flag: industry identifies the employer's activity, while occupation identifies the work a person performs.
+
+Activity datasets require a different treatment. The SF City Survey can estimate certain uses of parks, libraries, Muni, and other city services. AskCHIS can estimate some health behaviors at county level. Recreation registrations, event attendance, and library usage are administrative counts and may include repeat participation or exclude non-users; they should appear as contextual SF facts, not as representative filters in the core pool calculation. Do not attempt record-level linkage across these sources.
 
 ## 2. Build the ACS base
 

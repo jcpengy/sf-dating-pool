@@ -16,7 +16,7 @@ It will **not** call this the user's chance of meeting a match. Public demograph
 
 ## Proposed experience
 
-1. Begin with San Francisco residents age 18 and older.
+1. Begin with San Francisco residents age 21 and older.
 2. Show one preference per portrait-format card.
 3. Let the user accept, skip, or set a range for that criterion.
 4. Keep a persistent counter showing the estimated pool remaining.
@@ -33,6 +33,20 @@ The first release should include:
 - own children living in the household / none living in the household;
 - sexual orientation where the survey sample supports a responsible estimate; and
 - height as an optional, explicitly national model—not an SF-local statistic.
+
+After the core model is validated, an **SF life** expansion could add traits available on the same Census records:
+
+- works in a technology industry or computer/mathematical occupation;
+- works from home, takes transit, bikes, walks, or drives to work;
+- educational attainment and field of degree;
+- recently moved to San Francisco or has lived in the same home for a longer period;
+- lives alone, with roommates, with a partner, or in another household arrangement;
+- place of birth, citizenship, and year of arrival in the United States; and
+- language spoken at home.
+
+“Works in tech” needs two separate, visible definitions: **tech industry** describes the employer's business, while **tech occupation** describes the person's job. A designer at a software company and a software engineer at a hospital should not be silently classified the same way.
+
+Activity preferences are less suitable as population filters. The SF City Survey measures use of services such as parks, libraries, and Muni, and AskCHIS includes some health behaviors. Recreation registrations and library activity can add citywide context, but they are administrative participation counts—not representative percentages of residents—and generally cannot be joined to the Census population model.
 
 ## Data strategy
 
